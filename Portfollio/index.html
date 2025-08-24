@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOODEN - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Animations -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>WOODEN</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="mode-toggle">🌙</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('assets/bg.jpg');">
+    <div class="hero-text" data-aos="fade-up">
+      <h2><span id="typed"></span></h2>
+    </div>
+  </section>
+
+  <script>
+    // Typed text effect
+    new Typed("#typed", {
+      strings: [
+        "Hello I'm WOODEN.",
+        "Web3 enthusiast | Video Editor",
+        "Content creator passionate about decentralization, blockchain trends, and digital innovation."
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      backDelay: 1500,
+      loop: true
+    });
+
+    // Dark mode toggle
+    const toggleBtn = document.getElementById("mode-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀" : "🌙";
+    });
+
+    // Scroll animations
+    AOS.init();
+  </script>
+</body>
+</html>
